@@ -1,16 +1,27 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  font-family: "Merriweather", "Georgia", serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+main {
+  @apply container mx-auto w-full;
 }
 
-* {
-  box-sizing: border-box;
+.react-toggle-track-x {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+.react-toggle--checked,
+.react-toggle-track {
+  background: #222222 !important;
+  border-radius: 4rem;
+}
+
+.react-toggle-track-check > span {
+  margin-top: -2px !important;
 }
